@@ -27,12 +27,22 @@ function myTriangle(x1, y1, x2, y2, x3, y3, myColor) {
 }
   
 function myEllipse(x, y, w, h, myColor) {
+  if (mouseX < 200) {
   fill(myColor);
   ellipse(x, y, h, w);
+  } else {
+  fill("black");
+  ellipse(x, y, h, w);
+  }
 }
 
 function myArc(x, y, w, h, start, stop, myColor) {
+  if (mouseX < 200) {
   fill(myColor);
   angleMode(DEGREES);
   arc(x, y, w, h, start, stop);
+  } else {
+  fill("#FFC107");
+  arc(x, y, w, h, start, stop);
+  }
 }
